@@ -40,4 +40,9 @@ app.controller('ControllerSearch', function($scope, $http){
                         alert("Series has already been added to the profile, it is impossible to add it again.");
                     }
                 };
+
+                $scope.backToHomePage = function(){                   
+                        window.sessionStorage.setItem('seriesProfile', JSON.stringify($scope.seriesProfile));
+                        window.location.href='index.html'
+               };
             });           

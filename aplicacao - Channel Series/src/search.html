@@ -26,9 +26,11 @@
                     <tr ng-repeat="serie in series.Search">            
                         <td><img ng-src="{{serie.Poster}}" class="img-thumbnail" width="304" height="236"></td>
                         <td class = "textTable">{{serie.Title}}, {{serie.Year}}</td>
+                        <td><button ng-click="addSerieToProfile(serie.Title, serie.Year, serie.Poster)">Add to profile</button></td>
                     </tr>
                 </tbody>
             </table>
+            {{seriesProfile}}
         </div>
 
         <script src = "module - controllers/aplicacaoModule.js"></script>

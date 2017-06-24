@@ -57,4 +57,14 @@ app.controller('ControllerMain', function($scope, $http){
                     }
                    }
                };
+
+                $scope.removeProfileSeries = function(serieName){
+                   for(var k = 0; k < $scope.seriesProfile.length; k++){
+                    if($scope.seriesProfile[k]["name"] == serieName){
+                            $scope.seriesProfile.splice(k, 1);
+                    }
+                   }
+                   $scope.clickerChecker = false;
+
+               }
             });

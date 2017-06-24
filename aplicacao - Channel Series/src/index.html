@@ -52,6 +52,7 @@
                 <table class="table">
                     <tbody>
                         <tr>
+                            <button ng-click="removeProfileSeries(series.Title)" class="btn btn-primary btn-md">Remove profile series</button>
                             <td><img ng-src="{{series.Poster}}" class="img-thumbnail" width="304" height="236" />
                                 <td><strong>Name: </strong> {{series.Title}}</td>
                                 <td><strong>Synopsis: </strong>{{series.Plot}}</td>
@@ -60,17 +61,17 @@
                                 <td>
                                     <strong>Evaluation Note: </strong>{{showEvaluationNote(series.Title)}}
                                     <input type="number" class="form-control input-md" ng-model="evaluationNote">
-                                    <button ng-click="addEvaluationNote(series.Title)" class="btn btn-primary btn-md">Add Evaluation Note</button>
+                                    <button ng-click="addEvaluationNote(series.Title)" class="btn btn-primary btn-sm">Add Evaluation Note</button>
                                 </td>
                                 <td>
                                     <strong>Last watched chapter: </strong>{{showChapter(series.Title)}}
                                     <input type="number" class="form-control input-sm" ng-model="chapter">
-                                    <button ng-click="addChapter(series.Title)" class="btn btn-primary btn-md">Register Last Watched Chapter</button>
+                                    <button ng-click="addChapter(series.Title)" class="btn btn-primary btn-sm">Register Last Watched Chapter</button>
                                 </td>
                         </tr>
                     </tbody>
                 </table>
-                <button type="button" ng-click="clickerChecker = !clickerChecker" class="btn btn-primary btn-lg">Hide information</button>
+                <button type="button" ng-click="clickerChecker = !clickerChecker" class="btn btn-primary btn-md">Hide information</button>
             </div>
         </div>
     </div>

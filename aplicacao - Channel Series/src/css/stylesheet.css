@@ -1,6 +1,7 @@
 .title{
     margin-bottom: 0;
-    background-color: #DCDCDC;
+    background-color: #000000;
+    color: 	#FFFFFF;
 }
 
 .searchSeries{
@@ -17,3 +18,35 @@
 .textTable{
     font-size: 1.875em;
 }
+
+.form{
+    margin-top: 50px
+}
+
+.textSeriesProfile{
+    margin-top: 50px;
+    font-style: normal;
+    font-weight: 900;
+}
+
+a:link{
+    text-decoration: none;
+    color:#000000;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: #000000;
+}
+
+.table1{
+    width: 100%;
+}
+
+td{
+    font-size: 20px;
+    text-align: center;
+    width: 300px;
+}
+
+

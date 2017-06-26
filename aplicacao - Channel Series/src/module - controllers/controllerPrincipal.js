@@ -67,7 +67,7 @@ app.controller('ControllerMain', function($scope, $http){
                 $scope.seriesProfile[k]["chapter"] = $scope.chapter;
             }
         }
-
+        
         for(var k = 0; k < $scope.seriesProfileWatchlist.length; k++){
             if($scope.seriesProfileWatchlist[k]["name"] == serieName){
                 $scope.seriesProfileWatchlist[k]["chapter"] = $scope.chapter;

@@ -26,7 +26,7 @@
                         <li><a href ng-click= "redirectToWatchlist()">Watchlist</a></li>
                     </ul>
                 </nav>
-                <div class="container">
+                <div class = "searchSeries">
                     <form name="myForm" class="form-horizontal form ">
                         <div class="form-group">
                             <label class="control-label col-sm-2">Series Name:</label>
@@ -41,44 +41,48 @@
                         </div>
                     </form>
                 </div>
-                <div class="textSeriesProfile" class="container-fluid">
-                    <h1>Profile series</h1>
-                </div>
-                <div ng-repeat="serie in seriesProfile" class="container">
-                    <a href ng-click="showSeriesInformation(serie.name)">
-                        <h2>{{serie.name}}</h2>
-                    </a>
-                </div>
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h1 class="titleSeriesProfile">Profile series</h1>
+                    </div>
+                    <div class="panel-body">
+                        <div ng-repeat="serie in seriesProfile" class="container">
+                            <a href ng-click="showSeriesInformation(serie.name)">
+                                <h3>{{serie.name}}</h3>
+                            </a>
+                        </div>
 
-                <div ng-repeat="serie in seriesProfileWatchlist" class="container">
-                    <a href ng-click="showSeriesInformation(serie.name)">
-                        <h2>{{serie.name}}</h2>
-                    </a>
-                </div>
-                <div id="clickerChecker" ng-show="clickerChecker" class="container-fluid">
-                    <table class="table">
-                        <tbody>
-                            <tr>
-                                <button ng-click="removeProfileSeries(series.Title)" class="btn btn-primary btn-md">Remove profile series</button>
-                                <td><img ng-src="{{series.Poster}}" class="img-thumbnail" width="304" height="236" />
-                                <td><strong>Name: </strong> {{series.Title}}</td>
-                                <td><strong>Synopsis: </strong>{{series.Plot}}</td>
-                                <td><strong>Age rating: </strong>{{series.Rated}}</td>
-                                <td><strong>Average imdb: </strong>{{series.imdbRating}}</td>
-                                <td>
-                                    <strong>Evaluation Note: </strong>{{showEvaluationNote(series.Title)}}
-                                    <input type="number" class="form-control input-md" ng-model="evaluationNote">
-                                    <button ng-click="addEvaluationNote(series.Title)" class="btn btn-primary btn-sm">Add Evaluation Note</button>
-                                </td>
-                                <td>
-                                    <strong>Last watched chapter: </strong>{{showChapter(series.Title)}}
-                                    <input type="number" class="form-control input-sm" ng-model="chapter">
-                                    <button ng-click="addChapter(series.Title)" class="btn btn-primary btn-sm">Register Last Watched Chapter</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <button type="button" ng-click="clickerChecker = !clickerChecker" class="btn btn-primary btn-md">Hide information</button>
+                        <div ng-repeat="serie in seriesProfileWatchlist" class="container">
+                            <a href ng-click="showSeriesInformation(serie.name)">
+                                <h3>{{serie.name}}</h3>
+                            </a>
+                        </div>
+                        <div id="clickerChecker" ng-show="clickerChecker" class="container-fluid">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <button ng-click="removeProfileSeries(series.Title)" class="btn btn-primary btn-md">Remove profile series</button>
+                                        <td><img ng-src="{{series.Poster}}" class="img-thumbnail" width="304" height="236" />
+                                        <td><strong>Name: </strong> {{series.Title}}</td>
+                                        <td><strong>Synopsis: </strong>{{series.Plot}}</td>
+                                        <td><strong>Age rating: </strong>{{series.Rated}}</td>
+                                        <td><strong>Average imdb: </strong>{{series.imdbRating}}</td>
+                                        <td>
+                                            <strong>Evaluation Note: </strong>{{showEvaluationNote(series.Title)}}
+                                            <input type="number" class="form-control input-md" ng-model="evaluationNote">
+                                            <button ng-click="addEvaluationNote(series.Title)" class="btn btn-primary btn-sm">Add Evaluation Note</button>
+                                        </td>
+                                        <td>
+                                            <strong>Last watched chapter: </strong>{{showChapter(series.Title)}}
+                                            <input type="number" class="form-control input-sm" ng-model="chapter">
+                                            <button ng-click="addChapter(series.Title)" class="btn btn-primary btn-sm">Register Last Watched Chapter</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button type="button" ng-click="clickerChecker = !clickerChecker" class="btn btn-primary btn-md">Hide information</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
